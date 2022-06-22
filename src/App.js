@@ -1,10 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+
+
+      <div className='introBox'>
+      <img src="./logo.png" className="App-logo" alt="logo" />
+		    <p className="introTxt">Hello, this is an Artists-Page.</p>
+      </div>
+
+      <div className='flipCardBoxBox'>
+        
+
+      </div>
+
     </div>
   );
 }
