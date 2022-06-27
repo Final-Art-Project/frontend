@@ -1,4 +1,6 @@
 import './App.css';
+import ImageSlider from './components/ImageSlider';
+import {SliderData} from './components/SliderData';
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
 
       <div className='flipCardBoxBox'>
         
+      <ImageSlider slides={SliderData} />
 
       </div>
 
