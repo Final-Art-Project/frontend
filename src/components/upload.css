@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  padding: 2rem;
+}
+.App button {
+  margin-top: 2rem;
+}
+#fileForm {
+  display: flex;
+  flex-direction: column;
+}
+#fileForm label {
+  margin: 1rem 0 0.5rem 0;
+}
+#fileForm button {
+  align-self: flex-start;
+  padding: 0.5rem;
+}

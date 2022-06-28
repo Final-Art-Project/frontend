@@ -1,0 +1,30 @@
+header {
+  background-color: rgb(83, 124, 107);
+  padding: 1rem;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  color: rgb(150, 240, 213);
+  padding: 0 0.33rem;
+}
+header .btnMobileMenu {
+  align-self: flex-start;
+}
+header .nav {
+  display: flex;
+  list-style-type: none;
+}
+@media (min-width: 641px) {
+  header .btnMobileMenu {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
