@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { getImages, searchImages } from "./api";
 import { Header } from "./components/Header";
-import { Outlet, Link } from "react-router-dom";
-import Upload from "./components/Upload";
+import { Link } from "react-router-dom";
 
 import "./App.css";
 
