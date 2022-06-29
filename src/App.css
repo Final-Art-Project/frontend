@@ -8,7 +8,18 @@ form {
   form {
     grid-template-columns: 5fr 1fr 1fr;
   }
+*{
+  margin: 0;
+  padding: 0;
 }
+body {
+	background: #333;
+	color: #ccc;
+	font-size: 1.3rem;
+}
+.App {
+	padding: 20px;
+	font-family: 'Quicksand', sans-serif;}
 
 form input {
   padding: 10px;
@@ -24,6 +35,20 @@ form button {
   font-size: 32px;
   padding: 10px;
 }
+.introBox{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.App-logo {
+  height: 3rem;
+  width: 3rem;
+  pointer-events: none;
+  margin-top: 2rem;
+  padding: 10px;
+  margin: 8px;
+  border: 2px solid rgba(172, 255, 47, 0.705);
+  border-radius: 35px;}
 
 form button[type="button"] {
   background-color: rgb(135, 223, 198);
@@ -52,4 +77,23 @@ img {
   border: none;
   padding: 18px;
   margin: 3rem 0 3rem 0;
+}
+
+.introTxt{
+  border: 1px solid rgba(172, 255, 47, 0.705);
+  border-radius: 25px;
+  padding: 8px 1.3rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 }

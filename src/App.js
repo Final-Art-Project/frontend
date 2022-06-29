@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { getImages, searchImages } from "./api";
 import { Header } from "./components/Header";
 import { Link } from "react-router-dom";
-import Upload from "./components/Upload";
-
 import "./App.css";
+import ImageSlider from "./components/ImageSlider";
+import { SliderData } from "./components/SliderData";
 
 export default function App() {
   const [imageList, setImageList] = useState([]);
@@ -56,6 +56,8 @@ export default function App() {
         }}
       ></nav>
       <Link to="upload">Upload</Link> |{" "}
+      <Link to="imageSlider">ImageSlider</Link> |{" "}
+      <Link to="sliderData">SliderData</Link> |{" "}
       <form onSubmit={handleFormSubmit}>
         <input
           value={searchValue}
@@ -77,6 +79,16 @@ export default function App() {
         {nextCursor && (
           <button onClick={handleLoadMoreButtonClick}>Load More</button>
         )}
+      </div>
+      <div className="App">
+        <div className="introBox">
+          <img src="./logo.png" className="App-logo" alt="logo" />
+          <p className="introTxt">Hello, this is an Artists-Page.</p>
+        </div>
+
+        <div className="flipCardBoxBox">
+          <ImageSlider slides={SliderData} />
+        </div>
       </div>
     </>
   );
