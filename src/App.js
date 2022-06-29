@@ -59,6 +59,8 @@ export default function App() {
         }}
       ></nav>
       <Link to="upload">Upload</Link> |{" "}
+      <Link to="imageSlider">ImageSlider</Link> |{" "}
+      <Link to="sliderData">SliderData</Link> |{" "}
       <form onSubmit={handleFormSubmit}>
         <input
           value={searchValue}
