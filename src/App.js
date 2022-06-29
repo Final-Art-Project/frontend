@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 import "./App.css";
 
-import './App.css';
-import ImageSlider from './components/ImageSlider';
-import {SliderData} from './components/SliderData';
+import "./App.css";
+import ImageSlider from "./components/ImageSlider";
+import { SliderData } from "./components/SliderData";
 
 export default function App() {
   const [imageList, setImageList] = useState([]);
@@ -81,25 +81,16 @@ export default function App() {
           <button onClick={handleLoadMoreButtonClick}>Load More</button>
         )}
       </div>
- 
+      <div className="App">
+        <div className="introBox">
+          <img src="./logo.png" className="App-logo" alt="logo" />
+          <p className="introTxt">Hello, this is an Artists-Page.</p>
+        </div>
 
-    <div className="App">
-
-
-      <div className='introBox'>
-      <img src="./logo.png" className="App-logo" alt="logo" />
-		    <p className="introTxt">Hello, this is an Artists-Page.</p>
+        <div className="flipCardBoxBox">
+          <ImageSlider slides={SliderData} />
+        </div>
       </div>
-
-      <div className='flipCardBoxBox'>
-        
-      <ImageSlider slides={SliderData} />
-
-      </div>
-
-    </div>
     </>
   );
 }
-
-
