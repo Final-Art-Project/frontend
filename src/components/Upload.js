@@ -1,55 +1,62 @@
+import "./upload.css";
 import { useState } from "react";
 import axios from "axios";
+import { Header } from "./Header";
+import { Image } from "cloudinary-react";
 
-import "./upload.css";
+export default function Upload() {
+  const [selectedImages, setSelectedImages] = useState([]);
+  const [imageData, setImageData] = useState(null);
 
-function Upload() {
-  const [formData, setFormData] = useState({});
+  const uploadImage = () => {
+    const formData = new FormData();
+    formData.append("file", selectedImages);
+    formData.append("upload_preset", "Art-Project");
 
-  const handleChange = (e) => {
-    console.log(e.target.value);
-    setFormData({ file: e.target.files[0] });
-  };
+    const postImage = async () => {
+      try {
+        const response = await axios.post(
+          `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`,
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("formData.file:", formData.file);
-    const sendData = new FormData();
-    sendData.append("file", formData.file, formData.file.name);
-    try {
-      const response = await axios({
-        method: "post",
-        url: "http://localhost:3000/upload",
-        data: sendData,
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+          formData
+        );
+        console.log(response);
+        setImageData(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-      console.log("Formular erfolgreich gesendet.");
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
+    postImage();
   };
 
   return (
     <>
-      <main className="Upload">
-        <h1>Datei Upload</h1>
-        <form
-          id="fileForm"
-          name="fileForm"
-          data-netlify="true"
-          onSubmit={handleSubmit}
-        >
-          <label htmlFor="file">Datei auswählen:</label>
-          <input type="file" name="file" id="file" onChange={handleChange} />
+      <Header />
+      <div className="wrapper">
+        <h1 className="heading">Cloudinary Image Upload</h1>
+        <article className="article">
+          <input
+            type="file"
+            name="file"
+            id="file"
+            onChange={(e) => setSelectedImages(e.target.files[0])}
+            className="input"
+          />
+          <button onClick={uploadImage} className="button">
+            Upload Image
+          </button>
+        </article>
 
-          <button type="submit">Datei senden</button>
-        </form>
-      </main>
-      <footer>formData: {JSON.stringify(formData)}</footer>
+        <article className="image-container">
+          {imageData && (
+            <Image
+              cloudName="CLOUD_NAME"
+              publicId={`https://res.cloudinary.com/CLOUD_NAME/image/upload/v1649427526/${imageData.public_id}`}
+            />
+          )}
+        </article>
+      </div>
     </>
   );
 }
-
-export default Upload;
