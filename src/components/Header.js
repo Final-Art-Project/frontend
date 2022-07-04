@@ -1,30 +1,22 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 export const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   return (
     <header>
-      <figure className="logo">Art</figure>
+      <img src="./logo.png" className="App-logo" alt="logo" />
+
       <ul
         className="nav"
         style={{ display: showMobileNav ? "none" : undefined }}
       >
-        <li></li>
-        <li>
-          <a href="/">Art1</a>
-        </li>
-        <li>
-          <a href="/">Art2</a>
-        </li>
-        <li>
-          <a href="/">Art3</a>
-        </li>
-        <li>
-          <a href="/">Art4</a>
-        </li>
+        <Link to="upload">Upload</Link> |{" "}
+        <Link to="imageSlider">ImageSlider</Link> |{" "}
+        <Link to="sliderData">SliderData</Link> |
       </ul>
+
       <button
         className="btnMobileMenu"
         onClick={() => {

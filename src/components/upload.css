@@ -2,20 +2,42 @@
   padding: 0;
   margin: 0;
 }
-.App {
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 50px;
+  color: rgb(111, 250, 203);
+  text-shadow: 2px 2px 4px red;
+}
+.wrapper {
   padding: 2rem;
 }
-.App button {
-  margin-top: 2rem;
+.button {
+  margin-top: 3rem;
+  height: 50px;
+  width: 400px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 22px;
+  background-color: rgb(49, 88, 75);
+  color: rgb(141, 249, 213);
+  border-radius: 20px;
+  margin-left: 40px;
+  text-shadow: 2px 2px 4px red;
 }
-#fileForm {
+.input {
+  margin-top: 3rem;
+  height: 50px;
+  width: 400px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 22px;
+  background-color: rgb(49, 88, 75);
+  color: rgb(141, 249, 213);
+  border-radius: 20px;
+  text-shadow: 2px 2px 4px red;
+}
+.image-container {
   display: flex;
   flex-direction: column;
-}
-#fileForm label {
-  margin: 1rem 0 0.5rem 0;
-}
-#fileForm button {
-  align-self: flex-start;
-  padding: 0.5rem;
+  height: 50vh;
+  width: 50vw;
 }

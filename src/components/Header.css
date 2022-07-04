@@ -6,6 +6,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 header a {
   color: rgb(150, 240, 213);
   padding: 0 0.33rem;
@@ -27,4 +28,7 @@ header .nav {
     display: flex;
     flex-direction: column;
   }
+}
+.nav {
+  margin-right: 0px;
 }
