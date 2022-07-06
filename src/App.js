@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getImages, searchImages } from "./api";
 import { Header } from "./components/Header";
-
 import "./App.css";
 
-export default function App() {
+const App = () => {
   const [imageList, setImageList] = useState([]);
   const [nextCursor, setNextCursor] = useState(null);
   const [searchValue, setSearchValue] = useState("");
@@ -53,7 +52,6 @@ export default function App() {
           paddingBottom: "1rem",
         }}
       ></nav>
-
       <form onSubmit={handleFormSubmit}>
         <input
           value={searchValue}
@@ -78,4 +76,6 @@ export default function App() {
       </div>
     </>
   );
-}
+};
+
+export default App;
