@@ -34,12 +34,13 @@ export default function Upload() {
     <>
       <Header />
       <div className="wrapper">
-        <h1 className="heading">Cloudinary Image Upload</h1>
+        <h1 className="heading">Upload Image to Cloudinary in React </h1>
         <article className="article">
           <input
             type="file"
             name="file"
             id="file"
+            placeholder="Upload an Image"
             onChange={(e) => setSelectedImages(e.target.files[0])}
             className="input"
           />
@@ -52,7 +53,7 @@ export default function Upload() {
           {imageData && (
             <Image
               cloudName="CLOUD_NAME"
-              publicId={`https://res.cloudinary.com/CLOUD_NAME/image/upload/v1649427526/${imageData.public_id}`}
+              publicId={`https://res.cloudinary.com/${process.env.REACT_APP_CLOUD_NAME}/image/upload/v1649427526/${imageData.public_id}`}
             />
           )}
         </article>

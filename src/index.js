@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Upload from "./components/Upload";
 import ImageSlider from "./components/ImageSlider";
+import App from "./App";
+
 // import { SliderData } from "./components/SliderData";
 import "./reset.css";
-import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
