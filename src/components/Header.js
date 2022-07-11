@@ -12,9 +12,9 @@ export const Header = () => {
         className="nav"
         style={{ display: showMobileNav ? "none" : undefined }}
       >
-        <Link to="upload">Upload</Link> |{" "}
-        <Link to="imageSlider">ImageSlider</Link> |{" "}
-        <Link to="sliderData">SliderData</Link> |
+        <Link to="upload">Upload</Link> {" "}
+        <Link to="imageSlider">ImageSlider</Link> {" "}
+        <Link to="sliderData">SliderData</Link> 
       </ul>
 
       <button
