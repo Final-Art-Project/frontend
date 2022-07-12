@@ -1,12 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { getImages, searchImages } from "./api";
 import { Header } from "./components/Header";
+import Overlay from "./components/Overlay";
 import "./App.css";
 
 const App = () => {
   const [imageList, setImageList] = useState([]);
   const [nextCursor, setNextCursor] = useState(null);
   const [searchValue, setSearchValue] = useState("");
+  const [overlayVisible, setOverlayVisible] = useState(false);
+  //  const [selectedImage, setSelectedImage] = useState();
+  // useEffect{()=>{
+  //   if (selectedImage === null) {
+  //   console.log('kein Bild ausgewählt');
+  //   }
+  //   else  () {
+  //     setSelectedImage((image.url);
+  //   }
+  // }
+  // }}
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,6 +58,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <Overlay visible={overlayVisible} />
       <nav
         style={{
           borderBottom: "solid 1px",
@@ -66,7 +79,14 @@ const App = () => {
       </form>
       <div className="image-grid">
         {imageList.map((image) => (
-          <img src={image.url} alt={image.public_id}></img>
+          <img
+            onClick={() => {
+              setOverlayVisible(true);
+            }}
+            src={image.url}
+            alt={image.public_id}
+            style={{ objectFit: "contain", width: "100%", height: "100%" }}
+          ></img>
         ))}
       </div>
       <div className="footer">
