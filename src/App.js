@@ -9,7 +9,7 @@ const App = () => {
   const [nextCursor, setNextCursor] = useState(null);
   const [searchValue, setSearchValue] = useState("");
   const [overlayVisible, setOverlayVisible] = useState(false);
-  //  const [selectedImage, setSelectedImage] = useState();
+  const [selectedImage, setSelectedImage] = useState(null);
   // useEffect{()=>{
   //   if (selectedImage === null) {
   //   console.log('kein Bild ausgewählt');
@@ -58,7 +58,13 @@ const App = () => {
   return (
     <>
       <Header />
-      <Overlay visible={overlayVisible} />
+      <Overlay
+        visible={overlayVisible}
+        image={selectedImage}
+        onClose={() => {
+          setOverlayVisible(false);
+        }}
+      />
       <nav
         style={{
           borderBottom: "solid 1px",
@@ -81,6 +87,7 @@ const App = () => {
         {imageList.map((image) => (
           <img
             onClick={() => {
+              setSelectedImage(image.url);
               setOverlayVisible(true);
             }}
             src={image.url}
