@@ -10,15 +10,6 @@ const App = () => {
   const [searchValue, setSearchValue] = useState("");
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-  // useEffect{()=>{
-  //   if (selectedImage === null) {
-  //   console.log('kein Bild ausgewählt');
-  //   }
-  //   else  () {
-  //     setSelectedImage((image.url);
-  //   }
-  // }
-  // }}
 
   useEffect(() => {
     const fetchData = async () => {
