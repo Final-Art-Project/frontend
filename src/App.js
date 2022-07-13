@@ -56,12 +56,7 @@ const App = () => {
           setOverlayVisible(false);
         }}
       />
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      ></nav>
+
       <form onSubmit={handleFormSubmit}>
         <input
           value={searchValue}
