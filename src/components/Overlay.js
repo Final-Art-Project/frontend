@@ -17,7 +17,7 @@ export default function Overlay({ image, visible, onClose }) {
       >
         X
       </div>
-      <img src={image} />
+      <img src={image} alt="bild" />
     </div>
   );
 }

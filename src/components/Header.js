@@ -12,7 +12,6 @@ export const Header = () => {
         className="nav"
         style={{ display: showMobileNav ? "none" : undefined }}
       >
-<<<<<<< HEAD
         <li>
           <Link to="/">Homepage</Link>
         </li>
@@ -26,11 +25,6 @@ export const Header = () => {
           {" "}
           <Link to="sliderData">SliderData</Link>
         </li>
-=======
-        <Link to="upload">Upload</Link> {" "}
-        <Link to="imageSlider">ImageSlider</Link> {" "}
-        <Link to="sliderData">SliderData</Link> 
->>>>>>> Mohal
       </ul>
 
       <button
