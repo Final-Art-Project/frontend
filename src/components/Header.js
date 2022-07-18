@@ -12,9 +12,26 @@ export const Header = () => {
         className="nav"
         style={{ display: showMobileNav ? "none" : undefined }}
       >
-        <Link to="upload">Upload</Link> {" "}
-        <Link to="imageSlider">ImageSlider</Link> {" "}
-        <Link to="sliderData">SliderData</Link> 
+        {/* <nav
+          style={{
+            borderBottom: "solid 1px",
+            paddingBottom: "1rem",
+          }}
+        ></nav> */}
+        <li>
+          <Link to="/">Homepage</Link>
+        </li>
+        <li>
+          <Link to="upload">Upload</Link>{" "}
+        </li>
+
+        <li>
+          <Link to="imageSlider">ImageSlider</Link>{" "}
+        </li>
+        <li>
+          {" "}
+          <Link to="sliderData">SliderData</Link>
+        </li>
       </ul>
 
       <button
@@ -22,9 +39,7 @@ export const Header = () => {
         onClick={() => {
           setShowMobileNav(!showMobileNav);
         }}
-      >
-        =
-      </button>
+      ></button>
     </header>
   );
 };
