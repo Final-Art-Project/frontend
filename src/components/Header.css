@@ -15,8 +15,17 @@ header .btnMobileMenu {
   align-self: flex-start;
 }
 header .nav {
-  display: flex;
-  list-style-type: none;
+  /* display: inline-block;
+
+  flex-direction: row;
+  margin-left: 6rem;
+  text-decoration: none;
+  list-style-type: none; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 360px;
+  margin-bottom: 40px;
 }
 @media (min-width: 641px) {
   header .btnMobileMenu {
@@ -29,6 +38,11 @@ header .nav {
     flex-direction: column;
   }
 }
-.nav {
+/* .nav {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
   margin-right: 0px;
-}
+  margin-top: 0%;
+  margin-bottom: 30px;
+} */
