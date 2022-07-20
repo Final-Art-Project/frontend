@@ -18,13 +18,6 @@ export const Header = () => {
         <li>
           <Link to="upload">Upload</Link>{" "}
         </li>
-        <li>
-          <Link to="imageSlider">ImageSlider</Link>{" "}
-        </li>
-        <li>
-          {" "}
-          <Link to="sliderData">SliderData</Link>
-        </li>
       </ul>
 
       <button

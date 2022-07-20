@@ -1,9 +1,14 @@
 import React from "react";
 import "./Overlay.css";
 import { saveAs } from "file-saver";
+
 // import { IconName } from "react-icons/fa";
 
-export default function Overlay({ image, visible, onClose }) {
+export default function Overlay({ image, visible, onClose, onDelete }) {
+  const handleFromDelete = async () => {
+    onDelete(image.public_id);
+  };
+
   return (
     <div
       className="overlay"
@@ -22,15 +27,18 @@ export default function Overlay({ image, visible, onClose }) {
       <button
         className="download"
         onClick={() => {
-          const splitUrl = image.split("/");
+          const splitUrl = image?.url.split("/");
           const imageName = splitUrl[splitUrl.length - 1];
-          saveAs(image, imageName);
+          saveAs(image?.url, imageName);
         }}
       >
         Download
       </button>
+      <button className="delete" onClick={handleFromDelete}>
+        Delete
+      </button>
 
-      <img src={image} alt="bild" />
+      <img src={image?.url} alt="bild" />
     </div>
   );
 }

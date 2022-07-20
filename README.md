@@ -1,4 +1,45 @@
-# Getting Started with Create React App
+### Final-Art-Project ..... Photo gallery using Cloudinary Api
+
+## Full Stack Developer DCI :
+
+[Hayat Alkheder](https://github.com/Hayat12345678)
+
+[Claudia Hinze](https://github.com/Enza-von-metaTronics)
+
+[Rajwinder Singh Mohal](https://github.com/Mohal1125)
+
+# Install & Dependence :
+
+    React JS:  Frontend
+    Express,  multer:  Backend
+    MongoD: Databank
+
+## Intitial release :
+
+    GitHub Organizations Final-Art-Project
+    frontend
+    backend
+
+## Use for frontend :
+
+    npm install react-dom
+    npm i axios
+    npm install cloudinary-react
+    npm install react-router-dom
+    npm install file-saver
+    npm install dotenv
+
+## use for backend :
+
+    npm install express
+    npm install dotenv
+    npm install cors
+    npm install mongoose
+    npm install cloudinary
+    npm install multer
+    npm install nodemon
+    npm install multer-storage-cloudinary
+    npm 0install socket.io
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

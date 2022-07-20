@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getImages, searchImages } from "./api";
 import { Header } from "./components/Header";
 import Overlay from "./components/Overlay";
+import axios from "axios";
 import "./App.css";
 
 const App = () => {
@@ -46,6 +47,21 @@ const App = () => {
     setSearchValue("");
   };
 
+  const handleDelete = async (public_id) => {
+    try {
+      console.log("public_id:", public_id);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/delete`, {
+        data: {
+          public_id: public_id,
+        },
+      });
+      setImageList(imageList.filter((image) => image.public_id !== public_id));
+      setOverlayVisible(false);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
       <Header />
@@ -54,6 +70,9 @@ const App = () => {
         image={selectedImage}
         onClose={() => {
           setOverlayVisible(false);
+        }}
+        onDelete={(public_id) => {
+          handleDelete(public_id);
         }}
       />
       <nav
@@ -77,8 +96,9 @@ const App = () => {
       <div className="image-grid">
         {imageList.map((image) => (
           <img
+            key={image.public_id}
             onClick={() => {
-              setSelectedImage(image.url);
+              setSelectedImage(image);
               setOverlayVisible(true);
             }}
             src={image.url}
