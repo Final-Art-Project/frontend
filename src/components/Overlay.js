@@ -1,5 +1,6 @@
 import React from "react";
 import "./Overlay.css";
+import { FaArrowDown } from "react-icons/fa";
 import { saveAs } from "file-saver";
 
 // import { IconName } from "react-icons/fa";
@@ -32,7 +33,7 @@ export default function Overlay({ image, visible, onClose, onDelete }) {
           saveAs(image?.url, imageName);
         }}
       >
-        Download
+        <FaArrowDown />
       </button>
       <button className="delete" onClick={handleFromDelete}>
         Delete
