@@ -1,0 +1,53 @@
+.overlay {
+  position: fixed;
+  top: 40px;
+  left: 350px;
+  right: 350px;
+  bottom: 40px;
+  background-color: rgb(170, 186, 184);
+  border-radius: 10px;
+  border: black solid 3px;
+}
+.overlay img {
+  width: 700px;
+  height: 600px;
+  object-fit: cover;
+}
+.overlay .close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: black;
+  color: rgb(195, 196, 192);
+  font-size: 2rem;
+  border-radius: 50px;
+  border: solid 2px yellowgreen;
+
+  padding: 8px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.download {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: black;
+  color: rgb(195, 196, 192);
+  font-size: 2rem;
+  border-radius: 50px;
+  border: solid 2px yellowgreen;
+  padding: 8px;
+  cursor: pointer;
+}
+.delete {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: red;
+  color: rgb(195, 196, 192);
+  border: solid 2px yellowgreen;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  padding: 8px;
+  cursor: pointer;
+}
