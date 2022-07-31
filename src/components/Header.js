@@ -19,9 +19,11 @@ export const Header = () => {
           }}
         ></nav> */}
         <li>
+          {" "}
           <Link to="/">Homepage</Link>
         </li>
         <li>
+          {" "}
           <Link to="upload">Upload</Link>{" "}
         </li>
       </ul>
