@@ -40,6 +40,18 @@ header .nav {
     flex-direction: column;
   }
 }
+
+.logo {
+  height: 2rem;
+  width: 2rem;
+  pointer-events: none;
+  margin-top: 2rem;
+  padding: 10px;
+  margin: 8px;
+  border: 2px solid yellowgreen;
+  border-radius: 35px;
+  display: inline-block;
+}
 /* .nav {
   display: inline-block;
   justify-content: center;

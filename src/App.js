@@ -83,7 +83,7 @@ const App = () => {
           value={searchValue}
           onChange={(event) => setSearchValue(event.target.value)}
           required="required"
-          placeholder="Enter a search value..."
+          placeholder="Enter a search value... museum, animals, nature, beach, plants, food, landmarks, children, drawing, snow"
         ></input>
         <button type="submit">
           <FaSearch />

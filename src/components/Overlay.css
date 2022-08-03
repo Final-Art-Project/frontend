@@ -4,14 +4,14 @@
   left: 350px;
   right: 350px;
   bottom: 40px;
-  background-color: rgb(170, 186, 184);
+  background-color: rgb(98, 114, 112);
   border-radius: 10px;
   border: black solid 3px;
 }
 .overlay img {
-  width: 700px;
-  height: 600px;
-  object-fit: cover;
+  width: 800px;
+  height: 700px;
+  object-fit: contain;
 }
 .overlay .close {
   position: absolute;
