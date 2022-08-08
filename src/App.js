@@ -6,6 +6,8 @@ import { FaSearch } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 import axios from "axios";
 import "./App.css";
+//import ScrollButton from './components/ScrollButton';
+//import { Content, } from './components/Styles';
 
 const App = () => {
   const [imageList, setImageList] = useState([]);
@@ -13,6 +15,8 @@ const App = () => {
   const [searchValue, setSearchValue] = useState("");
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [visible, setVisible] = useState(false)
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +36,25 @@ const App = () => {
     ]);
     setNextCursor(responseJson.next_cursor);
   };
+  
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300){
+      setVisible(true);
+    }
+    else if (scrolled <= 300){
+      setVisible(false)
+    }
+  };
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
+  window.addEventListener('scroll', toggleVisible);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -66,6 +89,10 @@ const App = () => {
 
   return (
     <>
+    <button>
+     <FaArrowUp className="scrollButton" onClick={scrollToTop} 
+     style={{display: visible ? 'inline' : 'none'}} />
+    </button>
       <Header />
       <Overlay
         visible={overlayVisible}
@@ -109,9 +136,9 @@ const App = () => {
         {nextCursor && (
           <button onClick={handleLoadMoreButtonClick}>Load More</button>
         )}
-        <button>
+       {/* <button>
           <FaArrowUp />
-        </button>
+        </button> */}
       </div>
     </>
   );

@@ -2,9 +2,9 @@ header {
   background-color: black;
   padding: 0.5rem;
   color: #ccc;
-  display: flex;
+ /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;*/
 }
 /* .App-logo {
   display: inline-block;
@@ -12,13 +12,15 @@ header {
   align-items: center;
 } */
 
+  
+
 header a {
   color: rgb(150, 240, 213);
   padding: 0 0.33rem;
   text-decoration: none;
 }
 header .btnMobileMenu {
-  align-self: flex-start;
+  /*align-self: flex-start;*/
 }
 header .nav {
   text-decoration: none;

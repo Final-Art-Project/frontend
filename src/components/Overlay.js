@@ -4,6 +4,9 @@ import { FaArrowDown } from "react-icons/fa";
 import { saveAs } from "file-saver";
 
 // import { IconName } from "react-icons/fa";
+//import { faHome } from "@fortawesome/free-solid-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 export default function Overlay({ image, visible, onClose, onDelete }) {
   const handleFromDelete = async () => {
