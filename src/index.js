@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Upload from "./components/Upload";
 import { Header } from "./components/Header";
 import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 //import "./reset.css";
 
@@ -18,3 +19,5 @@ root.render(
     </Routes>
   </BrowserRouter>
 );
+
+reportWebVitals();
