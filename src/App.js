@@ -6,6 +6,8 @@ import { FaSearch } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 import axios from "axios";
 import "./App.css";
+//import ScrollButton from './components/ScrollButton';
+//import { Content, } from './components/Styles';
 
 const App = () => {
   const [imageList, setImageList] = useState([]);
@@ -13,6 +15,8 @@ const App = () => {
   const [searchValue, setSearchValue] = useState("");
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [visible, setVisible] = useState(false)
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +36,25 @@ const App = () => {
     ]);
     setNextCursor(responseJson.next_cursor);
   };
+  
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300){
+      setVisible(true);
+    }
+    else if (scrolled <= 300){
+      setVisible(false)
+    }
+  };
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
+  window.addEventListener('scroll', toggleVisible);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -65,6 +88,10 @@ const App = () => {
   };
   return (
     <>
+    <button>
+     <FaArrowUp className="scrollButton" onClick={scrollToTop} 
+     style={{display: visible ? 'inline' : 'none'}} />
+    </button>
       <Header />
       <Overlay
         visible={overlayVisible}
@@ -81,7 +108,11 @@ const App = () => {
           value={searchValue}
           onChange={(event) => setSearchValue(event.target.value)}
           required="required"
+<<<<<<< HEAD
+          placeholder="Enter a search value... museum, animals, nature, beach, plants, food, landmarks, children, drawing, snow"
+=======
           placeholder="Enter for example a search value museum, animals, nature, beach, plants, food, landmarks, children, drawing, snow ..."
+>>>>>>> hayat
         ></input>
         <button className="search-but" type="submit">
           <FaSearch />
@@ -110,9 +141,13 @@ const App = () => {
             Load More
           </button>
         )}
+<<<<<<< HEAD
+       {/* <button>
+=======
         <button className="top-but">
+>>>>>>> hayat
           <FaArrowUp />
-        </button>
+        </button> */}
       </div>
     </>
   );

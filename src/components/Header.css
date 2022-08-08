@@ -2,9 +2,9 @@ header {
   background-color: black;
   padding: 0.5rem;
   color: #ccc;
-  display: flex;
+ /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;*/
 }
 /* .App-logo {
   display: inline-block;
@@ -12,13 +12,15 @@ header {
   align-items: center;
 } */
 
+  
+
 header a {
   color: rgb(150, 240, 213);
   padding: 0 0.33rem;
   text-decoration: none;
 }
 header .btnMobileMenu {
-  align-self: flex-start;
+  /*align-self: flex-start;*/
 }
 header .nav {
   text-decoration: none;
@@ -39,6 +41,18 @@ header .nav {
     display: flex;
     flex-direction: column;
   }
+}
+
+.logo {
+  height: 2rem;
+  width: 2rem;
+  pointer-events: none;
+  margin-top: 2rem;
+  padding: 10px;
+  margin: 8px;
+  border: 2px solid yellowgreen;
+  border-radius: 35px;
+  display: inline-block;
 }
 /* .nav {
   display: inline-block;

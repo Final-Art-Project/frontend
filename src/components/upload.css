@@ -36,9 +36,13 @@ h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 22px;
   background-color: yellowgreen;
+<<<<<<< HEAD
+  color: rgb(15, 21, 3);
+=======
   color: black;
+>>>>>>> hayat
   border-radius: 20px;
-  box-shadow: 4px 4px 6px rgb(115, 101, 101);
+  box-shadow: 4px 4px 6px rgb(185, 177, 177);
 }
 /* .image-container {
   display: flex;

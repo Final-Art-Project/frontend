@@ -6,7 +6,7 @@ export const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   return (
     <header>
-      <img src="./logo.png" className="App-logo" alt="logo" />
+      <img src="./logo.png" className="logo" alt="logo" />
 
       <ul
         className="nav"
