@@ -1,11 +1,16 @@
 header {
-  background-color: rgb(83, 124, 107);
-  padding: 1rem;
+  background-color: black;
+  padding: 0.5rem;
   color: #ccc;
  /* display: flex;
   justify-content: space-between;
   align-items: center;*/
 }
+/* .App-logo {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+} */
 
   
 
@@ -13,26 +18,18 @@ header a {
   color: rgb(150, 240, 213);
   padding: 0 0.33rem;
   text-decoration: none;
-  display:flex;
 }
 header .btnMobileMenu {
   /*align-self: flex-start;*/
 }
 header .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  
-  
-  /* display: inline-block;
-
-  flex-direction: row;
-  margin-left: 6rem;
   text-decoration: none;
-  list-style-type: none; 
+  list-style-type: none;
   display: inline-flex;
-  margin-left: 360px;
-  margin-bottom: 40px;*/
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 360px;
+  margin-bottom: 40px; */
 }
 @media (min-width: 641px) {
   header .btnMobileMenu {
@@ -45,8 +42,17 @@ header .nav {
     flex-direction: column;
   }
 }
-ol, ul {
-	list-style: none;
+
+.logo {
+  height: 2rem;
+  width: 2rem;
+  pointer-events: none;
+  margin-top: 2rem;
+  padding: 10px;
+  margin: 8px;
+  border: 2px solid yellowgreen;
+  border-radius: 35px;
+  display: inline-block;
 }
 /* .nav {
   display: inline-block;

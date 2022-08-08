@@ -2,16 +2,25 @@ import "./upload.css";
 import { useState } from "react";
 import axios from "axios";
 import { Header } from "./Header";
+import { FaUpload } from "react-icons/fa";
 import { Image } from "cloudinary-react";
 
 export default function Upload() {
-  const [selectedImages, setSelectedImages] = useState([]);
+  const [selectedImages, setSelectedImages] = useState(null);
+
   const [imageData, setImageData] = useState(null);
+  const [tags, setTags] = useState("");
 
   const uploadImage = () => {
+    const tagsArray = tags.split(",");
+    const trimmedArray = tagsArray.map((tag) => {
+      return tag.trim();
+    });
+
     const formData = new FormData();
     formData.append("file", selectedImages);
     formData.append("upload_preset", "Art-Project");
+    formData.append("tags", trimmedArray);
 
     const postImage = async () => {
       try {
@@ -44,8 +53,16 @@ export default function Upload() {
             onChange={(e) => setSelectedImages(e.target.files[0])}
             className="input"
           />
-          <button onClick={uploadImage} className="button">
-            Upload Image
+          {selectedImages && (
+            <input value={tags} onChange={(e) => setTags(e.target.value)} />
+          )}
+
+          <button
+            onClick={uploadImage}
+            className="button"
+            disabled={selectedImages === null}
+          >
+            <FaUpload />
           </button>
         </article>
 

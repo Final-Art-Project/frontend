@@ -6,7 +6,7 @@ export const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   return (
     <header>
-      <img className="App-logo" src="./logo.png"  alt="logo" />
+      <img src="./logo.png" className="logo" alt="logo" />
 
       <ul
         className="nav"
@@ -19,18 +19,12 @@ export const Header = () => {
           }}
         ></nav> */}
         <li>
+          {" "}
           <Link to="/">Homepage</Link>
         </li>
         <li>
-          <Link to="upload">Upload</Link>{" "}
-        </li>
-
-        <li>
-          <Link to="imageSlider">ImageSlider</Link>{" "}
-        </li>
-        <li>
           {" "}
-          <Link to="sliderData">SliderData</Link>
+          <Link to="upload">Upload</Link>{" "}
         </li>
       </ul>
 

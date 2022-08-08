@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { getImages, searchImages } from "./api";
 import { Header } from "./components/Header";
 import Overlay from "./components/Overlay";
+import { FaSearch } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
+import axios from "axios";
 import "./App.css";
 
 const App = () => {
@@ -46,6 +49,21 @@ const App = () => {
     setSearchValue("");
   };
 
+  const handleDelete = async (public_id) => {
+    try {
+      console.log("public_id:", public_id);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/delete`, {
+        data: {
+          public_id: public_id,
+        },
+      });
+      setImageList(imageList.filter((image) => image.public_id !== public_id));
+      setOverlayVisible(false);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
       <Header />
@@ -55,6 +73,9 @@ const App = () => {
         onClose={() => {
           setOverlayVisible(false);
         }}
+        onDelete={(public_id) => {
+          handleDelete(public_id);
+        }}
       />
 
       <form onSubmit={handleFormSubmit}>
@@ -62,9 +83,11 @@ const App = () => {
           value={searchValue}
           onChange={(event) => setSearchValue(event.target.value)}
           required="required"
-          placeholder="Enter a search value..."
+          placeholder="Enter a search value... museum, animals, nature, beach, plants, food, landmarks, children, drawing, snow"
         ></input>
-        <button type="submit">Search</button>
+        <button type="submit">
+          <FaSearch />
+        </button>
         <button type="button" onClick={resetForm}>
           Clear
         </button>
@@ -72,13 +95,13 @@ const App = () => {
       <div className="image-grid">
         {imageList.map((image) => (
           <img
+            key={image.public_id}
             onClick={() => {
-              setSelectedImage(image.url);
+              setSelectedImage(image);
               setOverlayVisible(true);
             }}
             src={image.url}
             alt={image.public_id}
-            style={{ objectFit: "contain", width: "100%", height: "100%" }}
           ></img>
         ))}
       </div>
@@ -86,6 +109,9 @@ const App = () => {
         {nextCursor && (
           <button onClick={handleLoadMoreButtonClick}>Load More</button>
         )}
+        <button>
+          <FaArrowUp />
+        </button>
       </div>
     </>
   );

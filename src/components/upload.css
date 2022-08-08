@@ -6,7 +6,7 @@
 h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 50px;
-  color: rgb(111, 250, 203);
+  color: yellowgreen;
   text-shadow: 2px 2px 4px red;
 }
 .wrapper {
@@ -18,11 +18,15 @@ h1 {
   width: 400px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 22px;
-  background-color: rgb(49, 88, 75);
-  color: rgb(141, 249, 213);
+  background-color: yellowgreen;
+  color: black;
   border-radius: 20px;
   margin-left: 40px;
   text-shadow: 2px 2px 4px red;
+}
+.button:disabled {
+  background-color: rgb(88, 87, 87);
+  color: yellowgreen;
 }
 .input {
   margin-top: 3rem;
@@ -30,14 +34,14 @@ h1 {
   width: 400px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 22px;
-  background-color: rgb(49, 88, 75);
-  color: rgb(141, 249, 213);
+  background-color: yellowgreen;
+  color: rgb(15, 21, 3);
   border-radius: 20px;
-  text-shadow: 2px 2px 4px red;
+  box-shadow: 4px 4px 6px rgb(185, 177, 177);
 }
-.image-container {
+/* .image-container {
   display: flex;
   flex-direction: column;
   height: 50vh;
   width: 50vw;
-}
+} */
