@@ -2,6 +2,9 @@ import React from "react";
 import "./Overlay.css";
 import { saveAs } from "file-saver";
 // import { IconName } from "react-icons/fa";
+//import { faHome } from "@fortawesome/free-solid-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 export default function Overlay({ image, visible, onClose }) {
   return (
@@ -27,7 +30,11 @@ export default function Overlay({ image, visible, onClose }) {
           saveAs(image, imageName);
         }}
       >
-        Download
+        
+
+      Download
+
+
       </button>
 
       <img src={image} alt="bild" />

@@ -7,7 +7,7 @@ import ImageSlider from "./components/ImageSlider";
 import App from "./App";
 
 // import { SliderData } from "./components/SliderData";
-import "./reset.css";
+//import "./reset.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
