@@ -13,7 +13,7 @@ form {
     padding: 0;
   }
   body {
-    background: black;
+    background: rgb(26, 25, 25);
     color: #ccc;
     font-size: 1.3rem;
   }
@@ -57,14 +57,25 @@ form {
     display: inline-block;
   }
 
-  form button[type="button"] {
-    background-color: yellowgreen;
+  .clear-but {
+    background-color: aquamarine;
     border: none;
     border-radius: 10px;
     font-size: 32px;
-    padding: 16px;
+    padding: 1px;
+    margin-right: 15px;
   }
-
+  .search-but {
+    background-color: aquamarine;
+    border: none;
+    border-radius: 10px;
+    font-size: 32px;
+    padding: 1px;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: yellowgreen;
+  }
   img {
     width: 300px;
     height: 300px;
@@ -91,13 +102,22 @@ form {
     justify-content: center;
   }
 
-  .footer button {
+  .load-more {
     font-size: 36px;
     border-radius: 10px;
     border: none;
-    padding: 18px;
+    padding: 13px;
     margin: 3rem 0 3rem 0;
-    background-color: yellowgreen;
+    background-color: aquamarine;
+    margin-left: 20px;
+  }
+  .top-but {
+    font-size: 36px;
+    border-radius: 10px;
+    border: none;
+    padding: 13px;
+    margin: 3rem 0 3rem 0;
+    background-color: aquamarine;
     margin-left: 20px;
   }
 
@@ -119,3 +139,114 @@ a:hover {
 .nav {
   justify-content: space-between;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;600&display=swap");
+
+/* CSS RESET */
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* TYPO */
+.App,
+input,
+button {
+  font-family: "Spline Sans Mono", monospace;
+}
+
+/* CSS GRID */
+.App {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    ". loginStatus loginStatus ."
+    "title title title title"
+    "register register login devOverlay"
+    ". profile profile devOverlay";
+  gap: 1.5rem;
+  align-items: start;
+}
+/* .App h1 {
+  grid-area: title;
+  justify-self: center;
+  font-size: 2rem;
+}
+.loginContainer {
+  grid-area: login;
+}
+.registerContainer {
+  grid-area: register;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-areas:
+    "devInfo regTitle"
+    "devInfo regForm";
+}
+.registerContainer aside {
+  grid-area: devInfo;
+  background-color: yellowgreen;
+  align-self: start;
+}
+.registerContainer h2 {
+  grid-area: regTitle;
+}
+.registerContainer form {
+  grid-area: regForm;
+}
+.loginStatus {
+  grid-area: loginStatus;
+}
+.devOverlay {
+  grid-area: devOverlay;
+  background-color: yellowgreen;
+}
+.profile {
+  grid-area: profile;
+  margin-bottom: 2rem;
+}
+form {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+} */
+/* h2 {
+  margin-bottom: 2rem;
+}
+input {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+label {
+  margin: 1.5rem 0 0.5rem 0;
+  font-weight: 600;
+}
+button {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+/* DEV OVERLAY */
+/* aside {
+  font-size: 15px;
+  padding: 0.67rem 0.67rem 0 0.67rem;
+  border: 1px solid green;
+  border-radius: 20px;
+  color: #000;
+}
+.loginStatus {
+  background-color: hsl(180, 2%, 82%);
+  color: #000;
+}
+aside h3:not(:first-of-type) {
+  margin-top: 1rem;
+}
+.error {
+  font-weight: 600;
+  color: red;
+}  */

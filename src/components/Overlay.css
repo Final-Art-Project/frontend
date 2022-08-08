@@ -1,16 +1,16 @@
 .overlay {
   position: fixed;
   top: 40px;
-  left: 350px;
-  right: 350px;
+  left: 400px;
+  right: 400px;
   bottom: 40px;
   background-color: rgb(170, 186, 184);
   border-radius: 10px;
   border: black solid 3px;
 }
 .overlay img {
-  width: 700px;
-  height: 600px;
+  width: 900px;
+  height: 800px;
   object-fit: cover;
 }
 .overlay .close {
@@ -44,7 +44,7 @@
   bottom: 8px;
   right: 8px;
   background-color: red;
-  color: rgb(195, 196, 192);
+  color: black;
   border: solid 2px yellowgreen;
   border-radius: 20px;
   font-size: 1.5rem;

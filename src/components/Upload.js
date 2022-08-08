@@ -54,7 +54,12 @@ export default function Upload() {
             className="input"
           />
           {selectedImages && (
-            <input value={tags} onChange={(e) => setTags(e.target.value)} />
+            <input
+              className="input"
+              placeholder="add a tags or description to the photo"
+              value={tags}
+              onChange={(e) => setTags(e.target.value)}
+            />
           )}
 
           <button

@@ -63,7 +63,6 @@ const App = () => {
       console.log(err);
     }
   };
-
   return (
     <>
       <Header />
@@ -77,21 +76,21 @@ const App = () => {
           handleDelete(public_id);
         }}
       />
-
       <form onSubmit={handleFormSubmit}>
         <input
           value={searchValue}
           onChange={(event) => setSearchValue(event.target.value)}
           required="required"
-          placeholder="Enter a search value..."
+          placeholder="Enter for example a search value museum, animals, nature, beach, plants, food, landmarks, children, drawing, snow ..."
         ></input>
-        <button type="submit">
+        <button className="search-but" type="submit">
           <FaSearch />
         </button>
-        <button type="button" onClick={resetForm}>
+        <button className="clear-but" type="button" onClick={resetForm}>
           Clear
         </button>
       </form>
+      <h1>Welcome to the gallery of photos and videos</h1>
       <div className="image-grid">
         {imageList.map((image) => (
           <img
@@ -107,9 +106,11 @@ const App = () => {
       </div>
       <div className="footer">
         {nextCursor && (
-          <button onClick={handleLoadMoreButtonClick}>Load More</button>
+          <button className="load-more" onClick={handleLoadMoreButtonClick}>
+            Load More
+          </button>
         )}
-        <button>
+        <button className="top-but">
           <FaArrowUp />
         </button>
       </div>
