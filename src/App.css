@@ -45,30 +45,12 @@ form {
     object-fit: contain;
   }
 
-<<<<<<< HEAD
-  form button[type="button"] {
-    background-color: yellowgreen;
-=======
-  .App-logo {
-    height: 2rem;
-    width: 2rem;
-    pointer-events: none;
-    margin-top: 2rem;
-    padding: 10px;
-    margin: 8px;
-    border: 2px solid yellowgreen;
-    border-radius: 35px;
-    display: inline-block;
-  }
-
   .clear-but {
     background-color: aquamarine;
->>>>>>> hayat
     border: none;
     border-radius: 10px;
     font-size: 32px;
     padding: 1px;
-    margin-right: 15px;
   }
   .search-but {
     background-color: aquamarine;
@@ -100,6 +82,7 @@ form {
     /* display: grid; */
     gap: 0.5rem;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    text-align: center;
   }
 
   .footer {
@@ -116,14 +99,18 @@ form {
     background-color: aquamarine;
     margin-left: 20px;
   }
-  .top-but {
-    font-size: 36px;
+  .scrollButton {
+    position: fixed;
+    bottom: 50px;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
     border-radius: 10px;
     border: none;
-    padding: 13px;
-    margin: 3rem 0 3rem 0;
+    padding: 20px;
+    font-size: 100px;
     background-color: aquamarine;
-    margin-left: 20px;
+    left: 60%;
   }
 
   .introTxt {
@@ -144,19 +131,6 @@ a:hover {
 .nav {
   justify-content: space-between;
 }
-<<<<<<< HEAD
-.scrollButton {
-  position: fixed; 
-   width: 100%;
-   left: 40%;
-   bottom: 40px;
-   height: 20px;
-   font-size: 3rem;
-   z-index: 1;
-   cursor: pointer;
-   color: green
-}
-=======
 
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;600&display=swap");
 
@@ -175,7 +149,7 @@ button {
 }
 
 /* CSS GRID */
-.App {
+/* .App {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -187,7 +161,7 @@ button {
     ". profile profile devOverlay";
   gap: 1.5rem;
   align-items: start;
-}
+} */
 /* .App h1 {
   grid-area: title;
   justify-self: center;
@@ -268,4 +242,3 @@ aside h3:not(:first-of-type) {
   font-weight: 600;
   color: red;
 }  */
->>>>>>> hayat

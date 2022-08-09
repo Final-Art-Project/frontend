@@ -8,9 +8,13 @@ h1 {
   font-size: 50px;
   color: yellowgreen;
   text-shadow: 2px 2px 4px red;
+  text-align: center;
 }
 .wrapper {
   padding: 2rem;
+}
+.article {
+  text-align: center;
 }
 .button {
   margin-top: 3rem;
@@ -36,11 +40,7 @@ h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 22px;
   background-color: yellowgreen;
-<<<<<<< HEAD
-  color: rgb(15, 21, 3);
-=======
   color: black;
->>>>>>> hayat
   border-radius: 20px;
   box-shadow: 4px 4px 6px rgb(185, 177, 177);
 }

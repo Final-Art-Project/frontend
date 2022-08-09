@@ -15,8 +15,7 @@ const App = () => {
   const [searchValue, setSearchValue] = useState("");
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [visible, setVisible] = useState(false)
-  
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,25 +35,24 @@ const App = () => {
     ]);
     setNextCursor(responseJson.next_cursor);
   };
-  
+
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300){
+    if (scrolled > 300) {
       setVisible(true);
-    }
-    else if (scrolled <= 300){
-      setVisible(false)
+    } else if (scrolled <= 300) {
+      setVisible(false);
     }
   };
-  const scrollToTop = () =>{
+  const scrollToTop = () => {
     window.scrollTo({
-      top: 0, 
-      behavior: 'smooth'
+      top: 0,
+      behavior: "smooth",
       /* you can also use 'auto' behaviour
          in place of 'smooth' */
     });
   };
-  window.addEventListener('scroll', toggleVisible);
+  window.addEventListener("scroll", toggleVisible);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -88,10 +86,13 @@ const App = () => {
   };
   return (
     <>
-    <button>
-     <FaArrowUp className="scrollButton" onClick={scrollToTop} 
-     style={{display: visible ? 'inline' : 'none'}} />
-    </button>
+      <button>
+        <FaArrowUp
+          className="scrollButton"
+          onClick={scrollToTop}
+          style={{ display: visible ? "inline" : "none" }}
+        />
+      </button>
       <Header />
       <Overlay
         visible={overlayVisible}
@@ -108,11 +109,7 @@ const App = () => {
           value={searchValue}
           onChange={(event) => setSearchValue(event.target.value)}
           required="required"
-<<<<<<< HEAD
-          placeholder="Enter a search value... museum, animals, nature, beach, plants, food, landmarks, children, drawing, snow"
-=======
           placeholder="Enter for example a search value museum, animals, nature, beach, plants, food, landmarks, children, drawing, snow ..."
->>>>>>> hayat
         ></input>
         <button className="search-but" type="submit">
           <FaSearch />
@@ -121,7 +118,7 @@ const App = () => {
           Clear
         </button>
       </form>
-      <h1>Welcome to the gallery of photos and videos</h1>
+      <h1>Welcome to the gallery of photos</h1>
       <div className="image-grid">
         {imageList.map((image) => (
           <img
@@ -141,11 +138,7 @@ const App = () => {
             Load More
           </button>
         )}
-<<<<<<< HEAD
-       {/* <button>
-=======
-        <button className="top-but">
->>>>>>> hayat
+        {/* <button className="top-but">
           <FaArrowUp />
         </button> */}
       </div>
