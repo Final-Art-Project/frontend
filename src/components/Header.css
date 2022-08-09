@@ -1,8 +1,8 @@
 header {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.745);
   padding: 0.5rem;
   color: #ccc;
- /* display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;*/
 }
@@ -12,16 +12,12 @@ header {
   align-items: center;
 } */
 
-  
-
 header a {
   color: rgb(150, 240, 213);
   padding: 0 0.33rem;
   text-decoration: none;
 }
-header .btnMobileMenu {
-  /*align-self: flex-start;*/
-}
+
 header .nav {
   text-decoration: none;
   list-style-type: none;
@@ -54,6 +50,7 @@ header .nav {
   border-radius: 35px;
   display: inline-block;
 }
+
 /* .nav {
   display: inline-block;
   justify-content: center;

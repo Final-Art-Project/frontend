@@ -11,7 +11,7 @@
 .overlay img {
   width: 900px;
   height: 800px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .overlay .close {
   position: absolute;

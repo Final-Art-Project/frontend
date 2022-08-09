@@ -43,7 +43,7 @@ export default function Upload() {
     <>
       <Header />
       <div className="wrapper">
-        <h1 className="heading">Upload Image to Cloudinary in React </h1>
+        <h1 className="heading">Upload Image </h1>
         <article className="article">
           <input
             type="file"
