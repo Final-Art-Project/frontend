@@ -1,10 +1,10 @@
 header {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.745);
   padding: 0.5rem;
   color: #ccc;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;*/
 }
 /* .App-logo {
   display: inline-block;
@@ -17,9 +17,7 @@ header a {
   padding: 0 0.33rem;
   text-decoration: none;
 }
-header .btnMobileMenu {
-  align-self: flex-start;
-}
+
 header .nav {
   text-decoration: none;
   list-style-type: none;
@@ -40,6 +38,19 @@ header .nav {
     flex-direction: column;
   }
 }
+
+.logo {
+  height: 2rem;
+  width: 2rem;
+  pointer-events: none;
+  margin-top: 2rem;
+  padding: 10px;
+  margin: 8px;
+  border: 2px solid yellowgreen;
+  border-radius: 35px;
+  display: inline-block;
+}
+
 /* .nav {
   display: inline-block;
   justify-content: center;

@@ -43,7 +43,7 @@ export default function Upload() {
     <>
       <Header />
       <div className="wrapper">
-        <h1 className="heading">Upload Image to Cloudinary in React </h1>
+        <h1 className="heading">Upload Image </h1>
         <article className="article">
           <input
             type="file"
@@ -54,7 +54,12 @@ export default function Upload() {
             className="input"
           />
           {selectedImages && (
-            <input value={tags} onChange={(e) => setTags(e.target.value)} />
+            <input
+              className="input"
+              placeholder="add a tags or description to the photo"
+              value={tags}
+              onChange={(e) => setTags(e.target.value)}
+            />
           )}
 
           <button

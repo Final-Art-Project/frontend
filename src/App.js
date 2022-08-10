@@ -6,6 +6,8 @@ import { FaSearch } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 import axios from "axios";
 import "./App.css";
+//import ScrollButton from './components/ScrollButton';
+//import { Content, } from './components/Styles';
 
 const App = () => {
   const [imageList, setImageList] = useState([]);
@@ -13,10 +15,12 @@ const App = () => {
   const [searchValue, setSearchValue] = useState("");
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       const responseJson = await getImages();
+      console.log(responseJson);
       setImageList(responseJson.resources);
       setNextCursor(responseJson.next_cursor);
     };
@@ -32,6 +36,24 @@ const App = () => {
     ]);
     setNextCursor(responseJson.next_cursor);
   };
+
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      setVisible(true);
+    } else if (scrolled <= 300) {
+      setVisible(false);
+    }
+  };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
+  window.addEventListener("scroll", toggleVisible);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -63,9 +85,15 @@ const App = () => {
       console.log(err);
     }
   };
-
   return (
     <>
+      <button>
+        <FaArrowUp
+          className="scrollButton"
+          onClick={scrollToTop}
+          style={{ display: visible ? "inline" : "none" }}
+        />
+      </button>
       <Header />
       <Overlay
         visible={overlayVisible}
@@ -77,21 +105,21 @@ const App = () => {
           handleDelete(public_id);
         }}
       />
-
       <form onSubmit={handleFormSubmit}>
         <input
           value={searchValue}
           onChange={(event) => setSearchValue(event.target.value)}
           required="required"
-          placeholder="Enter a search value..."
+          placeholder="Enter for example a search value museum, animals, nature, beach, plants, food, landmarks, children, drawing, snow ..."
         ></input>
-        <button type="submit">
+        <button className="search-but" type="submit">
           <FaSearch />
         </button>
-        <button type="button" onClick={resetForm}>
+        <button className="clear-but" type="button" onClick={resetForm}>
           Clear
         </button>
       </form>
+      <h1>Welcome to the gallery of photos</h1>
       <div className="image-grid">
         {imageList.map((image) => (
           <img
@@ -107,11 +135,13 @@ const App = () => {
       </div>
       <div className="footer">
         {nextCursor && (
-          <button onClick={handleLoadMoreButtonClick}>Load More</button>
+          <button className="load-more" onClick={handleLoadMoreButtonClick}>
+            Load More
+          </button>
         )}
-        <button>
+        {/* <button className="top-but">
           <FaArrowUp />
-        </button>
+        </button> */}
       </div>
     </>
   );

@@ -9,7 +9,7 @@ export const getImages = async (nextCursor) => {
 
   const response = await fetch(`${API_URL}/photos?${params}`);
   const responseJson = await response.json();
-
+  console.log(responseJson);
   return responseJson;
 };
 
