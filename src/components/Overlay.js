@@ -1,7 +1,8 @@
 import React from "react";
 import "./Overlay.css";
 import { FaArrowDown } from "react-icons/fa";
-import { saveAs } from "file-saver";
+
+import FileSaver from "file-saver";
 // import { IconName } from "react-icons/fa";
 //import { faHome } from "@fortawesome/free-solid-svg-icons";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,7 +30,7 @@ export default function Overlay({ image, visible, onClose, onDelete }) {
         onClick={() => {
           const splitUrl = image?.url.split("/");
           const imageName = splitUrl[splitUrl.length - 1];
-          saveAs(image?.url, imageName);
+          FileSaver.saveAs(image?.url, imageName);
         }}
       >
         <FaArrowDown />
