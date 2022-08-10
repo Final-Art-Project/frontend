@@ -5,10 +5,11 @@ import Overlay from "./components/Overlay";
 import { FaSearch } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 import axios from "axios";
+import FileSaver from "file-saver";
 import "./App.css";
 //import ScrollButton from './components/ScrollButton';
 //import { Content, } from './components/Styles';
-
+FileSaver.saveAs("https://httpbin.org/image", "image.jpg");
 const App = () => {
   const [imageList, setImageList] = useState([]);
   const [nextCursor, setNextCursor] = useState(null);
@@ -105,6 +106,7 @@ const App = () => {
           handleDelete(public_id);
         }}
       />
+
       <form onSubmit={handleFormSubmit}>
         <input
           value={searchValue}
