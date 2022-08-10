@@ -2,17 +2,13 @@ import React from "react";
 import "./Overlay.css";
 import { FaArrowDown } from "react-icons/fa";
 import { saveAs } from "file-saver";
-
 // import { IconName } from "react-icons/fa";
 //import { faHome } from "@fortawesome/free-solid-svg-icons";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-
 export default function Overlay({ image, visible, onClose, onDelete }) {
   const handleFromDelete = async () => {
     onDelete(image.public_id);
   };
-
   return (
     <div
       className="overlay"
@@ -41,7 +37,6 @@ export default function Overlay({ image, visible, onClose, onDelete }) {
       <button className="delete" onClick={handleFromDelete}>
         Delete
       </button>
-
       <img src={image?.url} alt="bild" />
     </div>
   );
