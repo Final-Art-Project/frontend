@@ -2,15 +2,7 @@ header {
   background-color: rgba(0, 0, 0, 0.745);
   padding: 0.5rem;
   color: #ccc;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center;*/
 }
-/* .App-logo {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-} */
 
 header a {
   color: rgb(150, 240, 213);
@@ -24,38 +16,28 @@ header .nav {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /* margin-left: 360px;
-  margin-bottom: 40px; */
 }
 @media (min-width: 641px) {
   header .btnMobileMenu {
     display: none;
   }
-}
-@media (max-width: 640px) {
-  .nav {
-    display: flex;
-    flex-direction: column;
+
+  @media (max-width: 640px) {
+    .nav {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    height: 2rem;
+    width: 2rem;
+    pointer-events: none;
+    margin-top: 2rem;
+    padding: 10px;
+    margin: 8px;
+    border: 2px solid yellowgreen;
+    border-radius: 35px;
+    display: inline-block;
   }
 }
-
-.logo {
-  height: 2rem;
-  width: 2rem;
-  pointer-events: none;
-  margin-top: 2rem;
-  padding: 10px;
-  margin: 8px;
-  border: 2px solid yellowgreen;
-  border-radius: 35px;
-  display: inline-block;
-}
-
-/* .nav {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0px;
-  margin-top: 0%;
-  margin-bottom: 30px;
-} */

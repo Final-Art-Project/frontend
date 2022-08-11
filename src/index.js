@@ -5,8 +5,9 @@ import Upload from "./components/Upload";
 import { Header } from "./components/Header";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+// import "./index.css";
 
-//import "./reset.css";
+// import "./reset.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
