@@ -17,7 +17,7 @@ header .nav {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 641px) {
+/* @media (min-width: 640px) {
   header .btnMobileMenu {
     display: none;
   }
@@ -27,17 +27,16 @@ header .nav {
       display: flex;
       flex-direction: column;
     }
-  }
+  } */
 
-  .logo {
-    height: 2rem;
-    width: 2rem;
-    pointer-events: none;
-    margin-top: 2rem;
-    padding: 10px;
-    margin: 8px;
-    border: 2px solid yellowgreen;
-    border-radius: 35px;
-    display: inline-block;
-  }
+.logo {
+  height: 2rem;
+  width: 2rem;
+  pointer-events: none;
+  margin-top: 2rem;
+  padding: 10px;
+  margin: 8px;
+  border: 2px solid yellowgreen;
+  border-radius: 35px;
+  display: inline-block;
 }
