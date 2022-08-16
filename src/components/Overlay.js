@@ -1,7 +1,6 @@
 import React from "react";
 import "./Overlay.css";
 import { FaArrowDown } from "react-icons/fa";
-
 import FileSaver from "file-saver";
 // import { IconName } from "react-icons/fa";
 //import { faHome } from "@fortawesome/free-solid-svg-icons";
