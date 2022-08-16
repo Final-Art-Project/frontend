@@ -1,4 +1,4 @@
-### Final-Art-Project ..... Photo gallery using Cloudinary Api
+### Bildgalerie-page ..... Photo gallery using Cloudinary Api
 
 ## Full Stack Developer DCI :
 
@@ -7,6 +7,8 @@
 [Claudia Hinze](https://github.com/Enza-von-metaTronics)
 
 [Rajwinder Singh Mohal](https://github.com/Mohal1125)
+
+[Präsentation und canva link](https://www.canva.com/design/DAFJMNr9zdA/Op-R6CKP0BthoW16Ji0byA/view?utm_content=DAFJMNr9zdA&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu)
 
 # Install & Dependence :
 
