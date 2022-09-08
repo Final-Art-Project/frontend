@@ -1,4 +1,4 @@
-### [Bildgalerie-page] .....(https://bildgalerie-page.netlify.app) Photo gallery using Cloudinary Api
+### [Bildgalerie-page](https://bildgalerie-page.netlify.app) Photo gallery using Cloudinary Api
 
 ## Full Stack Developer DCI :
 
